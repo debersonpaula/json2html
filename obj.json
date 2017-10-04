@@ -1,0 +1,14 @@
+[
+    {"p": "Generated from JSON Object"},
+    {"p":[
+        {"button":["Click Here",
+            {"event":[
+                {"click": "function(e){ alert('Function generated from JSON Object');}"}
+            ]},
+            {"attr":[
+                {"type": "submit"}
+            ]}
+        ]}
+    ]},
+    {"p": "another paragraph!!!"}
+]
