@@ -6,8 +6,13 @@
                 {"click": "function(e){ alert('Function generated from JSON Object');}"}
             ]},
             {"attr":[
-                {"type": "submit"}
+                {"type": "submit", "class": "test"}
             ]}
+        ]},
+        {"button":["Open Another Page",
+            {"event":[
+                {"click": "function(e){ OpenView('/obj2'); }"}
+            ]}            
         ]}
     ]},
     {"p": "another paragraph!!!"}

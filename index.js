@@ -13,3 +13,8 @@ app.get('/obj',function(req,res){
     var obj = JSON.parse(fs.readFileSync('obj.json', 'utf8'));
     res.json(obj);
 });
+
+app.get('/obj2',function(req,res){
+    var obj = JSON.parse(fs.readFileSync('obj2.json', 'utf8'));
+    res.json(obj);
+});

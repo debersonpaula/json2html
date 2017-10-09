@@ -3,18 +3,28 @@
 
 
 var body = document.body;
+
+var content = document.createElement('div');
+body.appendChild(content);
+
 var button = document.createElement('button');
-button.innerHTML = "Test";
-button.addEventListener('click',function(e){
-    SendAjax('GET','/obj',function(result){
-        var obj = JSON.parse(result);
-        var elem = JPage2HTML(obj,'content');
-        body.appendChild(elem);
-        
-    });
-});
+button.innerHTML = "Open First Page";
 body.appendChild(button);
 
+
+button.addEventListener('click',function(e){
+    OpenView('/obj');
+});
+
+
+function OpenView(url){
+    SendAjax('GET',url,function(result){
+        var obj = JSON.parse(result);
+        var elem = JPage2HTML(obj,'content');
+        content.innerHTML = "";
+        content.appendChild(elem);
+    });
+}
 
 
 function SendAjax(method,url,callback){
